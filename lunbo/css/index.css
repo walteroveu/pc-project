@@ -1,0 +1,58 @@
+/*
+* @Author: Administrator
+* @Date:   2016-09-21 10:05:01
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-09-21 10:56:33
+*/
+@charset 'utf-8';
+html,
+body,
+div,
+ul,li{
+	margin: 0;
+	padding: 0;
+}
+.top img {
+	width: 100%;
+}
+
+.accordion {
+	width: 1200px;
+	height: 260px;
+	margin: 50px auto 0;
+}
+.accordion ul {
+	width: 1220px;
+	height: 100%;
+}
+.accordion ul li {
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 100%;
+	list-style: none;
+}
+.accordion ul li .intro {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+}
+.accordion li .intro p {
+	width: 30px;
+	font-size: 30px;
+	font-family: 'Microsoft Yahei';
+	margin: 30px auto 0;
+	color: #eee;
+}
+.accordion ul li .bg-img {
+	width: 100%;
+	height: 100%;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 100px;
+	background-color: #c33;
+}
