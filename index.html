@@ -5,13 +5,15 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
         <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/jquery.cookie.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
 
     </head>
     <body>
-
-    <!-- 首页头部-  -start-->
+      <!-- 首页头部-  -start-->
 	<div class="header">
 		<div class="container allContent">
 			<div class="kd-logo">
@@ -100,7 +102,9 @@
 	</div>
 	<!--头部结束-->
 
+
 	<!--导航栏 一级导航 开始-->
+
 	<div class="nav">
 		<div class="container allContent">
 		<div class="nav-menu">
@@ -1298,6 +1302,74 @@
 
 	<!--主体 main 结束 end-->
 
+	<!---登录页面-->
+		<div class="cover">
+			<div class="login-box">
+				<div class="close-btn">
+					<a class="icon-guanbi iconfont"></a>
+				</div>
+				<div class="quick-login">
+					<dl class="login-left">
+						<dt class="t-box">
+							<p class="title">无需注册</p>
+							<p class="cont">直接使用社交账号登录</p>
+						</dt>
+							<dd><a class="sina" href="javascript:;">新浪</a></dd>
+							<dd><a class="qq" href="javascript:;">QQ</a></dd>
+							<dd><a class="alipay" href="javascript:;">支付宝</a></dd>
+					</dl>
+				<div class="login-right">
+					<form id="login_form" method="post" action="" style="display:block">
+
+						<dl class="login-input">
+							<dt class="userlogin">用户登录</dt>
+							<input class="text" type="text" placeholder="邮箱/用户名" name="username" style="padding-left:20px;width:280px;height:32px;" />
+							<p class="tips1"></p>
+							<input class="psd" type="password" placeholder="密码" name="pwd" style="padding-left:20px;width:280px;height:32px;" />
+							<p class="tips2"></p>
+						</dl>
+						<p class="enter-up">
+							<span class="autologin f1 doauto">下次自动登录</span>
+						</p>
+						<div class="enter">
+							<div class="submit-btn" />立即登录</div>
+						</div>
+						<p class="forgot-psd">
+							<a class="forgot-it" href="javascript:;">忘记密码?</a>
+							还没账号?
+							<a class="toregister" href="javascript:{}">注册</a>
+						</p>	
+					</form>
+
+
+					<form id="reg_form" method="post" action="" style="display:none">
+
+						<dl class="login-input">
+							<dt class="userlogin">用户注册</dt>
+							<input class="text" type="text" placeholder="邮箱" name="userReg" style="padding-left:20px;width:280px;height:32px;" />
+							<p class="tips3"></p>
+							<input class="psd" type="password" placeholder="密码" name="password" style="padding-left:20px;width:280px;height:32px;" />
+							<p class="tips4"></p>
+						</dl>
+						<p class="enter-up">
+							<a class="kd-xieyi" href="javascript:;"><<卡当注册协议>></a>
+						</p>
+						<div class="enter">
+							<div  class="submit-reg">同意协议并注册</div>
+						</div>
+						<p class="forgot-psd">
+							已有账号?
+							<a class="tologin" href="javascript:{}">登录</a>
+						</p>	
+					</form>
+				</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+
 	<!--footer start-->
 	<div id="footer">
 		<div class="container allContent">
@@ -1414,69 +1486,5 @@
 			</li>
 		</ul>
 	</div>
-
-
-	<!---登录页面-->
-		<div class="cover">
-			<div class="login-box">
-				<div class="close-btn">
-					<a class="icon-guanbi iconfont"></a>
-				</div>
-				<div class="quick-login">
-					<dl class="login-left">
-						<dt class="t-box">
-							<p class="title">无需注册</p>
-							<p class="cont">直接使用社交账号登录</p>
-						</dt>
-							<dd><a class="sina" href="javascript:;">新浪</a></dd>
-							<dd><a class="qq" href="javascript:;">QQ</a></dd>
-							<dd><a class="alipay" href="javascript:;">支付宝</a></dd>
-					</dl>
-				<div class="login-right">
-					<form id="login_form" method="post" action="" style="display:block">
-
-						<dl class="login-input">
-							<dt class="userlogin">用户登录</dt>
-							<input class="text" type="text" placeholder="邮箱/用户名" name="username" style="padding-left:20px;width:280px;height:32px;" />
-							<input class="psd" type="password" placeholder="密码" name="psd" style="padding-left:20px;width:280px;height:32px;" />
-						</dl>
-						<p class="enter-up">
-							<span class="autologin f1 doauto">下次自动登录</span>
-						</p>
-						<div class="enter">
-							<input  class="submit-btn" type="submit" value="立即登录" />
-						</div>
-						<p class="forgot-psd">
-							<a class="forgot-it" href="javascript:;">忘记密码?</a>
-							还没账号?
-							<a class="toregister" href="javascript:{}">注册</a>
-						</p>	
-					</form>
-
-
-					<form id="reg_form" method="post" action="" style="display:none">
-
-						<dl class="login-input">
-							<dt class="userlogin">用户注册</dt>
-							<input class="text" type="text" placeholder="邮箱" name="username" style="padding-left:20px;width:280px;height:32px;" />
-							<input class="psd" type="password" placeholder="密码" name="psd" style="padding-left:20px;width:280px;height:32px;" />
-						</dl>
-						<p class="enter-up">
-							<a class="kd-xieyi" href="javascript:;"><<卡当注册协议>></a>
-						</p>
-						<div class="enter">
-							<input  class="submit-btn" type="submit" value="同意协议并注册" />
-						</div>
-						<p class="forgot-psd">
-							已有账号?
-							<a class="toregister" href="javascript:{}">登录</a>
-						</p>	
-					</form>
-				</div>
-				</div>
-				
-			</div>
-
-		</div>
     </body>
 </html>

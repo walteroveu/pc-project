@@ -2,146 +2,14 @@
 * @Author: Administrator
 * @Date:   2016-09-29 19:46:13
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-10-08 22:05:27
+* @Last Modified time: 2016-10-10 18:23:35
 */
 
 //'use strict';
-$(function(){
-	/*top*/
-	var top = {
-		init: function(){
-			this.kdMenu = $('.kd-menu');
-			this.myKd = this.kdMenu.find('.my-kd')
-			this.bgKd = this.kdMenu.find('.bg-kd');
-			this.hoverDown = this.kdMenu.find('.hoverdown');
-			
-			this.menuCart = $('.menu-cart');
-			this.myCart = this.menuCart.find('.my-cart');
-			this.bgKdc = this.menuCart.find('.bg-kdc');
-			//console.log(this.bgKdc)
-			this.shopCart = this.menuCart.find('.shop-cart')
-
-			this.menuPhone = $('.menu-phone');
-			this.myPhone = this.menuPhone.find('.my-phone');
-
-			this.menuColl = $('.menu-coll');
-			this.collIt =  this.menuColl.find('.coll-it');
-			this.bgKds = this.menuColl.find('.bg-kds');
-			this.shopColl = this.menuColl.find('.shop-coll');
-
-			this.menuList = $('.menu-list');
-			this.Item = this.menuList.find('.item');
-			this.navHover = this.menuList.find('.navHover');
-
-
-
-
-			this.hoverOver();//顶部菜单栏划过
-
-			this.navhover();//导航栏划过
-		},
-		hoverOver: function(){
-			//鼠标滑过小图标旋转 二级菜单出现 li边框出现
-			var that = this;
-			this.kdMenu.hover(function() {
-				that.bgKd.removeClass('dropdown-pic1');
-				that.bgKd.addClass('dropdown-pic');
-				that.hoverDown.show();
-				that.myKd.css({
-					'border-color':'#ccc',
-					'border-bottom-color':'#fff'
-				});
-			
-			}, function() {
-				that.bgKd.removeClass('dropdown-pic');
-				that.bgKd.addClass('dropdown-pic1');
-				that.hoverDown.hide();
-				that.myKd.css({
-					'border-color':'',
-					'border-bottom-color':''
-				});
-			
-
-			});
-
-			this.menuCart.hover(function() {
-				that.bgKdc.removeClass('dropdown-pic1');
-				that.bgKdc.addClass('dropdown-pic');
-				that.shopCart.show();
-				that.myCart.css({
-					'border-color':'#ccc',
-					'border-bottom-color':'#fff'
-				});
-			
-			}, function() {
-				that.bgKdc.removeClass('dropdown-pic');
-				that.bgKdc.addClass('dropdown-pic1');
-				that.shopCart.hide();
-				that.myCart.css({
-					'border-color':'',
-					'border-bottom-color':''
-				});
-			
-
-			});
-
-			this.menuColl.hover(function() {
-				that.bgKds.removeClass('dropdown-pic1');
-				that.bgKds.addClass('dropdown-pic');
-				that.shopColl.show();
-				that.collIt.css({
-					'border-color':'#ccc',
-					'border-bottom-color':'#fff'
-				});
-			
-			}, function() {
-				that.bgKds.removeClass('dropdown-pic');
-				that.bgKds.addClass('dropdown-pic1');
-				that.shopColl.hide();
-				that.collIt.css({
-					'border-color':'',
-					'border-bottom-color':''
-				});
-			
-
-			});
-			this.menuPhone.hover(function() {
-				that.myPhone.show();
-			
-			}, function() {
-				that.myPhone.hide();	
-
-			});
-
-		},
-
-		//导航栏划过下面小条跟随
-		navhover: function(){
-			var that = this;
-			var x = 0;
-			var width = 0;
-			this.Item.hover(function(){
-			 x = this.offsetLeft;
-			 widthX = that.Item.width();
-				that.navHover.stop(true).animate({
-					opacity:1,
-					width:widthX,
-					left:(16+x)	
-				},200);
-			},function(){
-				that.navHover.stop(true).animate({
-					opacity:0,
-					left:0
-				
-				},200);
-			});
-		},
-
-
-	};
-	top.init();
 
 	/*main*/
+
+$(function(){	
 	var main = {
 		init: function(){
 			this.navMod = $('.nav-mod');
@@ -169,9 +37,6 @@ $(function(){
 				
 			});
 		},
-
-
-	
 	};
 	main.init();
 
@@ -368,119 +233,13 @@ $(function(){
 		},
 	};
 	scrollFix.init();
-
-	//右边快速导航栏
-	var fastNav = {
-		init: function(){
-
-			this.weChat = $('.weChat');
-			this.code = this.weChat.next('.code-2d');
-			this.iconFont = $('.iconfont');
-			this.fastTop = $('.fast-top');
-			this.backTop = this.iconFont.find('.backTop');
-
-			this.codeweChat();
-			this.clickbackTop();
-			this.backTopNone();
-		},
-
-		codeweChat: function(){
-			var that = this;
-			this.weChat.hover(function(){
-				that.code.css({
-					display:'block',
-				});
-			},function(){
-				that.code.css({
-					display:'none',
-				});
-			});
-		},
-		clickbackTop: function(){
-			var that = this;
-			this.iconFont.hover(function(){
-				that.backTop.css({
-					display:'block',
-				});
-			},function(){
-				that.backTop.css({
-					display:'none',
-				});
-			});
-
-			this.iconFont.click(function(){
-				$('body').stop(true).animate({
-					scrollTop:0
-				});
-			});
-
-			},
-
-			backTopNone: function(){
-				var that = this;
-				$(window).scroll(function(){
-					var top = $(document).scrollTop();
-					if(top > 100){
-						that.fastTop.stop(true).fadeIn();
-					}else{
-						that.fastTop.stop(true).fadeOut();
-					}
-				});
-			},
-	};
-	fastNav.init();
-
 });
 
 
-// 百度接口 输入框
-$(function(){
-	
-		var searchBox = $('.search-box');
-		var keyWords = searchBox.find('#keywords');
-		
-		keyWords.on('input propertychange',function(){
-			getData( keyWords.val() );
-			$('.search-result').css({
-				display:'block',
-			});
-			if(keyWords.val() == ''){
-				$('.search-result').css({
-					display:'none',
-				});
-			}
-		});
-
-		function getData(keyword){
-			$.ajax({
-				url: 'http://suggestion.baidu.com/su',
-				type: 'GET',
-				data: {
-					wd:keyword,
-					cb:'doData'
-				},
-				dataType:'jsonp',
-
-				success: function(result){
-					//console.log(result);
-				}
-
-			});
-		};
-		
-
-});
-
-function doData(result){
-	//console.log(result);
-	var content = '';
-	for(var key in result.s){
-		content += '<li>'+ result.s[key] +'</li>'
-	}
-	$('.search-result').html(content); 
-}
 
 
+//
+//
 //登录-注册的页面
 $(function(){
 	var logIntoRegPage = {
@@ -492,19 +251,18 @@ $(function(){
 			this.loginBox = $('.login-box');
 			this.closeBtn = this.loginBox.find('.close-btn');
 			this.toRegister = $('.toregister');
+			this.tologIn = $('.tologin');
 			this.loginForm = $('#login_form');
 			this.regForm = $('#reg_form');
-			this.autoLogin = $('.autologin');
-
 
 
 			this.clickLogin();
 			this.clickReg();
 			this.clickClose();
 			this.clickChange();
-			this.clickRemmber(); 
+			 
 		},
-
+		//点击登录页面出现
 		clickLogin: function(){
 			var that = this;
 			this.logIn.click(function(){
@@ -523,6 +281,7 @@ $(function(){
 			});
 		},
 
+		//点击注册页面出现
 		clickReg: function(){
 			var that = this;
 
@@ -542,6 +301,7 @@ $(function(){
 			});
 		},
 
+		//关闭按钮点击
 		clickClose: function(){
 			var that = this;
 			this.closeBtn.click(function(){
@@ -558,35 +318,264 @@ $(function(){
 			});
 		},
 
-		//点击登录注册切换
+/////////////////点击登录注册切换//////////////
 		clickChange: function(){
 			var that = this;
-			var flag = false;
-			this.toRegister.click(function(){
+			
+			this.toRegister.click(function(){//登录跳转到注册
+				that.loginForm.css({
+					display:'none',
+				});
+				that.regForm.css({
+					display:'block',
+				});
+			});		
+			this.tologIn.click(function(){//注册跳转到登录
+				that.regForm.css({
+					display:'none',
+				});
+				that.loginForm.css({
+					display:'block',
+				});
+			});							
+		},
+	
+	};
+	logIntoRegPage.init();
+
+
+
+/////////////////登录注册判断///////////////////////////////////////////////////////
+	var loginJudge = {
+		init: function(){
+			this.userName = $('input[name = "username"]');//用户名
+			this.password = $('input[name = "pwd"]');//登录密码框
+
+			this.userReg = $('input[name = "userReg"]');//注册名
+			this.pwd = $('input[name = "password"]');//注册密码框
+			
+			//console.log(this.pwd)
+			
+			this.tips1 = $('.tips1');
+			this.tips2 =$('.tips2');
+
+			this.tips3 = $('.tips3');
+			this.tips4 =$('.tips4');
+
+			this.submitBtn = $('.submit-btn');//登录按钮
+			this.submitReg = $('.submit-reg');//注册按钮
+
+			this.autoLogin = $('.autologin');//自动登录
+
+			this.flag = false;//定义全局变量用于判断用户名和密码格式否正确 全都正确的话点击完成注册
+			this.a = false;
+			this.b = false;
+
+			this.focus();
+			this.blur();
+			this.loginFocus();
+			this.psdBlur();
+			this.clickRemmber();//点击记住密码
+
+
+			this.clickReg();//点击注册
+			this.clickLogin();//点击登录
+
+			this.judgeRem();//判断是否记住用户名和密码 下次登录直接出现
+
+
+		},
+
+		//输入框获取焦点
+		focus: function(){
+			var that = this;
+			this.userReg.focus(function(){
+				$(this).css({
+					boxShadow: '0 0 3px #e44715'
+				});
+			});
+			this.pwd.focus(function(){
+				$(this).css({
+					boxShadow: '0 0 3px #e44715'
+				});
+			});
+
+		},
+
+		//输入框失去焦点 判断输入内容
+		blur: function(){
+			var that = this;
+			
+			//var c = false;
+
+			//email正则
+			var eMailreg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+
+			this.userReg.blur(function(){
+
+				var eMailstr = that.userReg.val();
 				
-				if(!flag){
-					//console.log(111)
-					that.loginForm.css({
-						display:'none',
-					});
-					that.regForm.css({
-						display:'block',
-					});
-					flag = true;
+				$(this).css({
+					boxShadow: 'none',
+				});
+				//判断用户名输入内容
+				if( eMailreg.test(eMailstr) ){
+					that.tips3.html('有效的邮箱');
+					that.a=true;
+
+				}else{
+					that.tips3.html('邮箱格式有误,请重新输入');
 				}
-				else{
-					//console.log(222)
-					that.regForm.css({
-						display:'none',
-					});
-					that.loginForm.css({
-						display:'block',
-					});
-					flag = false;
+
+				//判断是否存在该用户
+				that.checkData( eMailstr );
+
+
+			});
+
+			//密码框失去焦点
+			this.pwd.blur(function(){
+				var pwdStr = that.pwd.val();
+				//密码正则
+				var pwdReg = /^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]{6,20}$/;
+				$(this).css({
+					boxShadow: 'none',
+				});
+
+				//判断密码输入内容
+				if( pwdReg.test(pwdStr) ){
+					that.tips4.html('密码有效');
+					 that.b=true;
+				}else{
+					that.tips4.html('密码长度介于6-20位之间');
+				}
+			});
+		
+			
+		},
+
+
+
+		//检查用户名
+		checkData: function(eMail){
+			//console.log(eMail)
+				var that = this;
+				$.getJSON('js/data.json', function(result){
+					//console.log(result)
+				if(result[eMail]){
+					that.tips3.html('该用户已经存在,请重新输入');
 				}
 				
 			});
 		},
+
+		clickReg: function(){
+			var that = this;		
+			 this.submitReg.click(function(){
+			 	//console.log(that.a)
+			 	if( that.a==true && that.b==true ){
+				
+					that.flag = true;
+				}
+
+			 	//console.log(that.flag)
+			 	if(that.flag == true ){
+			 		alert('注册成功');
+			 	}
+			 })
+		},
+		
+/////////////////////////////////////登录判断//////////////////////////////////////////
+		
+		//登录输入框获取焦点
+		loginFocus: function(){
+
+			this.userName.focus(function(){
+				$(this).css({
+					boxShadow: '0 0 3px #e44715'
+				});
+			});
+			this.password.focus(function(){
+				$(this).css({
+					boxShadow: '0 0 3px #e44715'
+				});
+			});
+
+		},
+
+
+		//用户名和密码框失去焦点 判断输入内容
+		psdBlur: function(){
+			var that = this;
+			//用户名框失去焦点
+			this.userName.blur(function(){
+				$(this).css({
+					boxShadow: 'none',
+				});
+			});
+
+			//密码框失去焦点
+			this.password.blur(function(){
+				
+				$(this).css({
+					boxShadow: 'none',
+				});
+			});
+		},
+
+		//登录检查用户名
+		checkUname: function(eMail){
+			var that = this;
+			$.getJSON('js/data.json', function(result){
+					
+				if(result[eMail]){
+					//console.log(result[eMail])
+					that.tips1.html('邮箱/用户名正确');
+				}else{
+					that.tips1.html('邮箱/用户名不存在');
+				}
+		
+			});
+		},
+
+		//登录检查密码
+		checkPwd: function(pwd){
+			var that = this;
+			var eMail = that.userName.val();
+			$.getJSON('js/data.json', function(result){
+				
+				if(result[eMail] == pwd){
+					that.tips2.html('密码正确');
+				}else{
+					that.tips2.html('密码不正确');
+				}
+		
+			});
+		},
+
+		
+		//点击登录
+		clickLogin: function(){
+			var that = this;
+
+			this.submitBtn.click(function(){
+				var eMailstr = that.userName.val();
+
+				var pwdStr = that.password.val();
+				that.checkUname( eMailstr );//检查用户名
+				that.checkPwd( pwdStr );//检查密码
+				
+				if( that.autoLogin.hasClass('doauto') ){
+					//console.log(that.autoLogin)
+				
+					$.cookie('username',that.userName.val(),{ expires:30, path:'/'} );
+					$.cookie('password',that.password.val(),{ expires:30,path:'/'} );
+					
+				}
+
+			});
+		},
+		//点击是否记住密码 
 		clickRemmber: function(){
 			var that = this;
 			var flag = true; 
@@ -594,17 +583,33 @@ $(function(){
 				if(flag){
 					$(this).removeClass('doauto');
 					flag = false;
+					//不记住密码 就移除cookie
+					$.cookie('username',that.userName.val(),{ expires:-1, path:'/'} );
+					$.cookie('password',that.password.val(),{ expires:-1,path:'/'} );
 				}else{
 					$(this).addClass('doauto');
 					flag = true;
 				}
-				
+					
 			});
 		},
-	};
-	logIntoRegPage.init();
 
-})
+		judgeRem: function(){
+			var that = this;
+			if( that.autoLogin.hasClass('doauto') ){
+				that.userName.val( $.cookie('username') );
+				//console.log($.cookie('username'));
+				that.password.val( $.cookie('password') );
+				//console.log( $.cookie('password') );
+			}
+		},
+
+
+	};
+	loginJudge.init();
+
+
+});
 
 
 

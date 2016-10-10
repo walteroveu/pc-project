@@ -1,0 +1,94 @@
+/*
+* @Author: Administrator
+* @Date:   2016-10-10 19:40:39
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-10-10 21:46:10
+*/
+.kd-main {
+    position: relative;
+    z-index: 100;
+    .container{
+    	width: 1200px;
+    	margin: 0 auto;
+    	.first-screen{
+    		margin-bottom: 30px;
+    		.goods-main{
+    			margin-right: 8px;
+    			float: left;
+				padding-top: 35px;
+				padding-right: 18px;
+				width: 972px;
+				.goods-show{
+					width: 400px;
+					float: left;
+					.kd-img-zoom {
+					    width: 398px;
+					    height: 398px;
+					    border: 1px solid #dedede;
+					    overflow: hidden;
+					    .zoom-link{
+					    	display: block;
+							width: 100%;
+							height: 100%;
+							text-align: center;
+							line-height: 72px;
+							text-decoration: none;
+							outline-style: none;
+							.zoomPad {
+							    position: relative;
+							    float: left;
+							    z-index: 99;
+							    cursor: crosshair;
+							    img{
+							    	vertical-align: top;
+							    }
+							    .zoomPup{
+							    	border: 1px solid #CCC;
+									z-index: 101;
+									cursor: crosshair;
+									overflow: hidden;
+									background-color: #FFF;
+									opacity: 0.6;
+							    }
+							    .zoomWindow{
+							    	background-color: #FFF;
+							    	height: auto;
+							    	.zoomWrapper{
+								    	border:0;
+								    	position: relative;
+								    	z-index: 110;
+								    	.zoomWrapperTitle{
+								    		background: #999;
+											color: #FFF;
+											height: 18px;
+											line-height: 18px;
+											overflow: hidden;
+											text-align: center;
+											font-size: 10px;
+											position: absolute;
+											top: 0;
+											left: 0;
+											z-index: 120;
+											-moz-opacity: .6;
+											opacity: .6;
+								    	}
+								    }
+							    }
+							    .zoomWrapperImage{
+							    	display: block;
+									position: relative;
+									overflow: hidden;
+									z-index: 110;
+									img{
+										z-index: 101;
+									}
+							    }
+							    
+							}
+					    }
+					}
+				}
+    		}
+    	}
+    }
+}

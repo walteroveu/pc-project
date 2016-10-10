@@ -3,314 +3,8 @@
 * @Author: Administrator
 * @Date:   2016-09-28 18:20:18
 * @Last Modified by:   Administrator
-* @Last Modified time: 2016-10-08 20:26:16
+* @Last Modified time: 2016-10-10 18:26:06
 */
-blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
-  margin: 0;
-  padding: 0;
-}
-
-body, button, input, select, textarea {
-  font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5B8B\4F53',sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-address, cite, dfn, em, var {
-  font-style: normal;
-}
-
-code, kbd, pre, samp {
-  font-family: courier new,courier,monospace;
-}
-
-small {
-  font-size: 12px;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-body {
-  width: 1280px;
-}
-
-.dropdown-pic {
-  -webkit-transition: 0.4s;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-  -moz-transition: -moz-transform 0.4s ease-out;
-  transform: rotateZ(180deg);
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform: rotateZ(180deg);
-}
-
-.dropdown-pic1 {
-  -webkit-transition: 0.4s;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-  -moz-transition: -moz-transform 0.4s ease-out;
-  transform: rotateZ(0deg);
-  -webkit-transform: rotateZ(0deg);
-  -moz-transform: rotateZ(0deg);
-}
-
-.fontColor {
-  color: #f4604b;
-}
-
-.allContent {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.header {
-  width: 1280px;
-  height: 124px;
-  border-bottom: 1px solid #ededed;
-}
-.header .container {
-  height: 26px;
-}
-.header .container .kd-logo {
-  position: absolute;
-  top: 0;
-}
-.header .container .kd-logo a {
-  float: left;
-  height: 170px;
-  width: 150px;
-  background: url(../images/kadang.png) no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-.header .container .kd-logo a:hover {
-  background-position: 0 -160px;
-}
-.header .container .top-intro {
-  height: 24px;
-  border-bottom: 1px solid #ededed;
-}
-.header .container .top-intro .kd-welcome {
-  float: left;
-  width: 188px;
-  height: 24px;
-  line-height: 24px;
-  margin-left: 162px;
-  color: #999;
-}
-.header .container .top-intro .kd-welcome a {
-  color: #999;
-  margin: 0 6px;
-}
-.header .container .top-intro .kd-welcome a:hover {
-  color: #f4604b;
-  text-decoration: none;
-}
-.header .container .top-intro .introMenu {
-  height: 24px;
-  width: 465px;
-  float: right;
-}
-.header .container .top-intro .introMenu .topMenu {
-  height: 24px;
-  width: 465px;
-}
-.header .container .top-intro .introMenu .topMenu .menu {
-  float: left;
-  color: #999;
-  line-height: 24px;
-  position: relative;
-}
-.header .container .top-intro .introMenu .topMenu .menu a {
-  float: left;
-  padding: 0 8px;
-  position: relative;
-  height: 24px;
-  line-height: 24px;
-  color: #999;
-  border-style: solid;
-  border-width: 0 1px 1px;
-  border-color: transparent;
-  z-index: 100;
-}
-.header .container .top-intro .introMenu .topMenu .menu a:hover {
-  color: #f4604b;
-  text-decoration: none;
-}
-.header .container .top-intro .introMenu .topMenu .menu a .dropdown-bg {
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  background: url(../images/new-common.png);
-}
-.header .container .top-intro .introMenu .topMenu .menu a .bg-kd {
-  background-position: 0px -405px;
-  position: relative;
-  left: 0;
-}
-.header .container .top-intro .introMenu .topMenu .menu a .bg-cart {
-  background-position: 0 -427px;
-  margin-right: 4px;
-  position: relative;
-  top: 2px;
-}
-.header .container .top-intro .introMenu .topMenu .menu a .bg-phone {
-  display: inline-block;
-  width: 9px;
-  height: 15px;
-  position: relative;
-  top: 2px;
-  margin-right: 3px;
-  background: url(../images/phone.png);
-}
-.header .container .top-intro .introMenu .topMenu .menu .hoverdown {
-  width: 70px;
-  position: absolute;
-  left: -1px;
-  top: 24px;
-  padding: 5px 8px;
-  border: 1px solid #ccc;
-  z-index: 200;
-  background-color: #fff;
-  line-height: 26px;
-}
-.header .container .top-intro .introMenu .topMenu .menu .hoverdown .tips {
-  width: 62px;
-}
-.header .container .top-intro .introMenu .topMenu .menu .shop-cart {
-  width: 300px;
-}
-.header .container .top-intro .introMenu .topMenu .menu .my-phone {
-  left: -46px !important;
-  padding: 0;
-  border: 0;
-  top: 40px;
-  width: 150px;
-  height: 188px;
-  position: absolute;
-  top: 40px;
-  display: none;
-}
-.header .container .kd-details {
-  margin-top: 23px;
-  padding-left: 170px;
-}
-.header .container .kd-details img {
-  float: right;
-  margin-top: -7px;
-}
-.header .container .kd-details .head-mid {
-  float: right;
-  margin-right: 55px;
-}
-.header .container .kd-details .head-mid .search-box {
-  width: 350px;
-  background: url(../images/search-img.png) no-repeat;
-  overflow: hidden;
-}
-.header .container .kd-details .head-mid .search-box .textinput {
-  padding-left: 20px;
-  height: 34px;
-  border: 0;
-  outline: none;
-  background: none;
-  width: 90%;
-  float: left;
-  margin: 2px 0 0 3px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-}
-.header .container .kd-details .head-mid .search-box .search-btn {
-  float: right;
-  height: 36px;
-  width: 40px;
-  cursor: pointer;
-  background: url(../images/search-img.png) right 0 no-repeat;
-  margin-left: -40px;
-  overflow: hidden;
-  border: 0;
-}
-.header .container .kd-details .head-mid .search-box .search-btn:hover {
-  background-position: right -39px;
-}
-.header .container .kd-details .head-mid .search-tab {
-  padding-top: 5px;
-  width: 350px;
-  outline: none;
-}
-.header .container .kd-details .head-mid .search-tab a {
-  padding-left: 20px;
-  text-decoration: none;
-}
-
-/*瀵艰埅*/
-.nav {
-  height: 34px;
-  width: 100%;
-  border-bottom: 1px solid #999;
-}
-.nav .container {
-  height: 34px;
-}
-.nav .container .nav-menu {
-  position: relative;
-  float: left;
-}
-.nav .container .nav-menu .menu-list {
-  position: relative;
-  margin-left: 150px;
-}
-.nav .container .nav-menu .menu-list li {
-  line-height: 34px;
-  float: left;
-  color: #eb744f;
-  display: inline;
-}
-.nav .container .nav-menu .menu-list li a.item {
-  float: left;
-  display: inline;
-  color: #000;
-  font-size: 14px;
-  position: relative;
-  padding: 0 18px;
-  margin: 0 8px;
-  text-decoration: none;
-  font-weight: 900;
-}
-.nav .container .nav-menu .menu-list li a.item:hover {
-  color: #f4604b;
-}
-.nav .container .nav-menu .menu-list li a.item img {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-.nav .container .nav-menu .menu-list .navHover {
-  height: 2px;
-  width: 0px;
-  background-color: #F4604B;
-  font-size: 0;
-  position: absolute;
-  left: 0;
-  top: 33px;
-  margin: 0;
-  float: none;
-  opacity: 0;
-}
-
 /*main*/
 .main .main-content {
   overflow: hidden;
@@ -866,175 +560,6 @@ body {
   display: block;
 }
 
-#footer {
-  width: 100%;
-  margin-top: 10px;
-}
-#footer .container {
-  width: 1200px;
-  margin: 0 auto;
-}
-#footer .container .kd-service {
-  padding: 20px;
-  color: #999;
-  font-family: 'Microsoft Yahei';
-}
-#footer .container .kd-service li {
-  display: inline;
-  float: left;
-  width: 12%;
-  text-align: center;
-}
-#footer .container .kd-service li .service-pic {
-  height: 48px;
-  width: 48px;
-  margin: 0 auto;
-  background: url(../images/service-001.png) no-repeat;
-}
-#footer .container .kd-service li .s2 {
-  background-position: 0 -49px;
-}
-#footer .container .kd-service li .s3 {
-  background-position: 0 -98px;
-}
-#footer .container .kd-service li .s4 {
-  background-position: 0 -147px;
-}
-#footer .container .kd-service li .s5 {
-  background-position: 0 -196px;
-}
-#footer .container .kd-service li .s6 {
-  background-position: 0 -245px;
-}
-#footer .container .kd-service li .s7 {
-  background-position: 0 -294px;
-}
-#footer .container .kd-service li .kd-cap {
-  font-size: 14px;
-  color: #000;
-  line-height: 2em;
-}
-#footer .container .kd-service li a {
-  color: #999;
-  text-decoration: none;
-}
-#footer .container .kd-service .clearfix::after {
-  content: '.';
-  clear: both;
-  height: 0;
-  visibility: hidden;
-  display: block;
-}
-#footer .container .links {
-  margin: 15px 0;
-  color: #606060;
-  font-family: 'Microsoft Yahei';
-  text-align: center;
-  word-spacing: 5px;
-}
-#footer .container .links a {
-  display: inline-block;
-  line-height: 2em;
-  margin: 0 10px;
-  color: #606060;
-}
-#footer .container .links .mod-copyright {
-  margin-top: 10px;
-  text-align: center;
-  color: #acacac;
-}
-
-.fast-nav {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  width: 40px;
-  z-index: 1008;
-}
-.fast-nav .fast-li {
-  position: relative;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  background-color: #eee;
-}
-.fast-nav .fast-li .on-askme {
-  height: auto;
-  margin-bottom: 2px;
-}
-.fast-nav .fast-li .fast-a {
-  display: block;
-  line-height: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  text-decoration: none;
-}
-.fast-nav .fast-li .fast-a .askme {
-  height: 32px;
-  width: 32px;
-  background: url(../images/wenwo.png) no-repeat 0 0;
-  margin: 0 auto;
-  display: block;
-}
-.fast-nav .fast-li .fast-a span {
-  color: #666;
-  display: block;
-  margin-top: 3px;
-  padding-bottom: 4px;
-  text-align: center;
-}
-.fast-nav .fast-li .fast-a span:hover {
-  color: #e44715;
-}
-.fast-nav .fast-li .weChat {
-  display: block;
-  width: 32px;
-  height: 32px;
-  margin: 3px auto 0;
-  background: url(../images/wechat.png) no-repeat 0 0;
-}
-.fast-nav .fast-li .code-2d {
-  display: none;
-  position: absolute;
-  right: 60px;
-  top: -90px;
-  width: 146px;
-  height: 180px;
-  background: url(../images/2dcode.jpg) no-repeat -1px -7px;
-  border: 1px solid #ccc;
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-.fast-nav .fast-top {
-  position: relative;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  display: none;
-}
-.fast-nav .fast-top .icon-zhiding {
-  font-size: 26px;
-  text-align: center;
-  padding-left: 5px;
-  color: #999;
-  text-decoration: none;
-}
-.fast-nav .fast-top .icon-zhiding .backTop {
-  position: absolute;
-  width: 40px;
-  left: 0;
-  top: -4px;
-  font-size: 12px;
-  color: #fff;
-  display: block;
-  margin-top: 3px;
-  padding-bottom: 4px;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-  cursor: pointer;
-}
-
 .cover {
   position: fixed;
   top: 0;
@@ -1142,13 +667,20 @@ body {
   text-shadow: 1px 1px 0 #FFF;
 }
 .cover .login-box .quick-login .login-right .login-input input {
-  margin-bottom: 20px;
   border: 0;
   border: 1px solid #D8D8D8;
   border-radius: 2px;
   padding: 1px 1px 1px 32px !important;
   background: url(../images/login.png) no-repeat;
   line-height: 32px;
+  outline: none;
+}
+.cover .login-box .quick-login .login-right .login-input p {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: #e44715;
+  text-align: right;
 }
 .cover .login-box .quick-login .login-right .login-input .text {
   background-position: 7px -203px;
@@ -1190,12 +722,32 @@ body {
   font-size: 18px;
   color: #fff;
   height: 45px;
-  background-color: #E34B35;
-  border: 1px solid #E34B35;
+  background-color: #F4604B;
+  border: 1px solid #F4604B;
   font-family: 'Microsoft Yahei';
   font-weight: bold;
-  padding: 0 20px;
+  line-height: 45px;
+  text-align: center;
   cursor: pointer;
+}
+.cover .login-box .quick-login .login-right .enter .submit-btn:hover {
+  background-color: #E34B35;
+}
+.cover .login-box .quick-login .login-right .enter .submit-reg {
+  width: 320px;
+  font-size: 18px;
+  color: #fff;
+  height: 45px;
+  background-color: #F4604B;
+  border: 1px solid #F4604B;
+  font-family: 'Microsoft Yahei';
+  font-weight: bold;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+}
+.cover .login-box .quick-login .login-right .enter .submit-reg:hover {
+  background-color: #E34B35;
 }
 .cover .login-box .quick-login .login-right .forgot-psd {
   font-size: 14px;
